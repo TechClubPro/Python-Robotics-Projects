@@ -1,8 +1,8 @@
 """
 Program to control the brightness of an Image 
-depending on the values read through IR Distance Sensor.
+depending on the values read through Light Sensor.
 
-IR Distance Sensor is connected at IO pin 1 (Pin 27 of ESP32)
+Light Sensor is connected at IO pin 1 
 
 brightness parameter is adjusted by mapping 
 Highest brightness value(255), 
