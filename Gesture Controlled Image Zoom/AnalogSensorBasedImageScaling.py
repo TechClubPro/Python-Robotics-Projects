@@ -2,7 +2,7 @@
 Program to scale an Image 
 depending on the values read through IR Distance Sensor.
 
-IR Distance Sensor is connected at IO pin 1 (Pin 27 of ESP32)
+IR Distance Sensor is connected at IO pin 1 
 
 scaling width & Height is adjusted by mapping 
 Highest Width(700), Highest Height (640) 
