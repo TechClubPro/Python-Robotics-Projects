@@ -1,16 +1,17 @@
 """
-Program to scale an Image 
-depending on the values read through IR Distance Sensor.
+Program to Rotate an image in a direction of a Gesture sensed through
+two IR proximity sensors
 
-IR Distance Sensor is connected at IO pin 1 (Pin 27 of ESP32)
+IR Proximity Sensor1 is connected at IO pin 1 
+IR Proximity Sensor2 is connected at IO pin 2 
 
-scaling width & Height is adjusted by mapping 
-Highest Width(700), Highest Height (640) 
-to Heighest Analog Reading by sensor(4095)
 
-IO Pin 1 is configured to Analog Input, to read analog values from sensor
 
-We used floor operator to get integer values of Width and Height
+IO Pin 1 is configured to Digital Input, to read Digital values from sensor
+IO Pin 2 is configured to Digital Input, to read Digital values from sensor
+
+
+
 """
 import phygital_v2 as phy
 from time import sleep as s
@@ -96,26 +97,7 @@ while True:
                 rotator.blitRotate(screen,newimg,(280,300),i)
                 s(0.1)
         
-        # print(data)
         
-        # # newWidth=data//8
-        # # newHeight= data//8
-        # angle=data1//10
-        
-        # # print(bright)
-        # screenImg = pygame.image.load("Images/background.jpg")
-        # screen.blit(screenImg,(0,0)) 
-        
-        # img= pygame.image.load("Images/apple.jpg")
-               
-        # # #Function to adjust brightness of the image
-        # # img.fill((bright,bright,bright),special_flags=pygame.BLEND_RGB_ADD)
-        # newimg=pygame.transform.scale(img,(400,400))
-        # # screen.blit(newimg,(10,10)) 
-        
-        # rotator.blitRotate(screen,newimg,(280,300),-angle)
- 
-        # time.sleep(1)
         
     except:
         if KeyboardInterrupt:
